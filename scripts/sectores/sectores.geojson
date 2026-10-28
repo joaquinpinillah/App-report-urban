@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "nombre": "Centro",
-        "dividir_por": "Estero Marga Marga",
+        "dividir_por": "Estero Marga-Marga",
         "punto": [-71.5518, -33.0246]
       },
       "geometry": { "type": "Polygon", "coordinates": [[
@@ -16,7 +16,7 @@
       "type": "Feature",
       "properties": {
         "nombre": "Población Vergara",
-        "dividir_por": "Estero Marga Marga",
+        "dividir_por": "Estero Marga-Marga",
         "punto": [-71.5530, -33.0165]
       },
       "geometry": { "type": "Polygon", "coordinates": [[
