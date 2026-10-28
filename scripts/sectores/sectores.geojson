@@ -3,16 +3,24 @@
   "features": [
     {
       "type": "Feature",
-      "properties": { "nombre": "Centro" },
+      "properties": {
+        "nombre": "Centro",
+        "dividir_por": "Estero Marga Marga",
+        "punto": [-71.5518, -33.0246]
+      },
       "geometry": { "type": "Polygon", "coordinates": [[
-        [-71.5600, -33.0218], [-71.5440, -33.0218], [-71.5440, -33.0280], [-71.5600, -33.0280], [-71.5600, -33.0218]
+        [-71.5600, -33.0130], [-71.5450, -33.0130], [-71.5450, -33.0285], [-71.5600, -33.0285], [-71.5600, -33.0130]
       ]] }
     },
     {
       "type": "Feature",
-      "properties": { "nombre": "Población Vergara" },
+      "properties": {
+        "nombre": "Población Vergara",
+        "dividir_por": "Estero Marga Marga",
+        "punto": [-71.5530, -33.0165]
+      },
       "geometry": { "type": "Polygon", "coordinates": [[
-        [-71.5585, -33.0130], [-71.5470, -33.0130], [-71.5470, -33.0212], [-71.5585, -33.0212], [-71.5585, -33.0130]
+        [-71.5600, -33.0130], [-71.5450, -33.0130], [-71.5450, -33.0285], [-71.5600, -33.0285], [-71.5600, -33.0130]
       ]] }
     }
   ]
