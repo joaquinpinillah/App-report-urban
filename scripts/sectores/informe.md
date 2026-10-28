@@ -1,0 +1,121 @@
+# Sectores del piloto
+
+## Centro: 20471 m de calles
+
+- 1 Norte: 2333 m
+- (sin nombre): 1627 m
+- Avenida Valparaíso: 1518 m
+- Arlegui: 1518 m
+- Viana: 1496 m
+- Álvarez: 1411 m
+- Traslaviña: 641 m
+- Marina: 560 m
+- 2 Norte: 520 m
+- Villanelo: 517 m
+- Quillota: 507 m
+- 5 Oriente: 475 m
+- Etchevers: 438 m
+- Quinta: 425 m
+- Avenida Libertad: 386 m
+- Quilpué: 329 m
+- Limache: 327 m
+- Errázuriz: 313 m
+- Ecuador: 299 m
+- Plaza José Francisco Vergara: 282 m
+- Plaza Sucre: 277 m
+- Montaña: 249 m
+- Batuco: 242 m
+- Villanelo Alto: 208 m
+- Egaña: 201 m
+- Crucero: 201 m
+- 4 Oriente: 189 m
+- Pasaje San Luis: 175 m
+- 5 1/2 Oriente: 167 m
+- Paseo Cousiño: 155 m
+- Plaza Latorre: 133 m
+- Pasaje Jofré: 124 m
+- Alcalde Prieto Nieto: 122 m
+- Central: 121 m
+- Pasaje Ruiz: 120 m
+- Pasaje Protectora: 119 m
+- 2 Oriente: 118 m
+- Paseo Valle: 116 m
+- Nueva Marina: 105 m
+- 3 1/2 Oriente: 100 m
+- Grove: 98 m
+- Puente Mercado: 97 m
+- 1 Oriente: 97 m
+- Puente Quillota: 90 m
+- Lampa: 89 m
+- Alberto Blest Gana: 85 m
+- Pasaje Eleuterio Ramirez: 75 m
+- Pasaje Quillota: 71 m
+- Mercado: 70 m
+- 1 Poniente: 56 m
+- Pasaje 2 Norte: 55 m
+- Pasaje Poblete: 55 m
+- Almirante Goñi: 52 m
+- Pasaje 1 Norte: 48 m
+- 2 1/2 Norte: 39 m
+- Etchevers Alto: 39 m
+- Las Rosas: 38 m
+- Quito: 38 m
+- 2 Poniente: 36 m
+- Avenida La Marina: 31 m
+- Pasaje Errázuriz 516: 23 m
+- 3 Poniente: 15 m
+- Puente Ecuador: 14 m
+- Pasaje Klamer: 1 m
+- 4 Poniente: 0 m
+
+## Población Vergara: 20397 m de calles
+
+- Avenida Libertad: 1847 m
+- 3 Norte: 1132 m
+- 4 Norte: 1091 m
+- 6 Norte: 1091 m
+- 5 Norte: 1060 m
+- 8 Norte: 1003 m
+- 7 Norte: 994 m
+- Avenida San Martín: 993 m
+- 1 Oriente: 967 m
+- 2 Oriente: 943 m
+- 2 Poniente: 924 m
+- 1 Poniente: 923 m
+- 3 Poniente: 923 m
+- 4 Poniente: 777 m
+- 9 Norte: 683 m
+- (sin nombre): 581 m
+- 2 Norte: 568 m
+- 5 Poniente: 530 m
+- 10 Norte: 459 m
+- 5 1/2 Poniente: 307 m
+- Avenida Perú: 280 m
+- 6 Poniente: 265 m
+- Pasaje 6 Norte: 147 m
+- Pasaje Montt: 136 m
+- Massot: 130 m
+- Pasaje Sarratea: 119 m
+- 1/2 Poniente: 118 m
+- 1/2 Oriente: 116 m
+- 4 1/2 Poniente: 115 m
+- 3 1/2 Poniente: 115 m
+- Pasaje Dolores: 111 m
+- Pasaje José Manuel Balmaceda: 107 m
+- Quillota: 102 m
+- 8 1/2 Norte: 99 m
+- Pasaje 9 1/2 Norte: 58 m
+- Borgoño: 58 m
+- Latorre: 57 m
+- 3 Norte 943: 49 m
+- Pasaje Esencia: 48 m
+- Pasaje 2 Poniente: 46 m
+- Pasaje 1 Oriente 548: 45 m
+- Pasaje 1 Oriente 560: 45 m
+- Pasaje Stohrs: 43 m
+- Pasaje Andreani: 43 m
+- Conjunto Antillanca: 39 m
+- 1 Norte: 38 m
+- Pasaje 1 1/2 Poniente: 34 m
+- Teniente Hernán Merino Correa: 31 m
+- Pasaje Neumann: 6 m
