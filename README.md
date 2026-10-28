@@ -7,10 +7,20 @@ Documento de requerimientos: https://claude.ai/artifact/7r6B3pt33gZAGyhA7fMokn
 ## Cómo correrlo
 
 1. Instala dependencias: `npm install`
-2. Crea un proyecto en [Supabase](https://supabase.com), ejecuta `supabase/migrations/0001_reportes.sql` en su editor SQL y copia `.env.example` a `.env.local` con la URL y la clave anónima del proyecto.
+2. Crea un proyecto en [Supabase](https://supabase.com), pega `supabase/instalar.sql` en su editor SQL (reúne todas las migraciones), activa los ingresos anónimos (Authentication → Sign In / Providers → Allow anonymous sign-ins) y copia `.env.example` a `.env.local` con la URL y la clave anónima del proyecto.
 3. Levanta la app: `npm run dev`
 
 Sin el paso 2 la app abre en **modo demo**: datos de ejemplo alrededor de Plaza Vergara que se reinician al recargar. Sirve para recorrer las pantallas sin backend.
+
+## Publicar en GitHub Pages
+
+El flujo `.github/workflows/publicar.yml` publica la app en `https://<usuario>.github.io/App-report-urban/` con cada cambio en `main`. Una sola vez:
+
+1. Settings → Pages → Source: **GitHub Actions**.
+2. Settings → Secrets and variables → Actions → pestaña Variables: crea `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY`. Ambas son públicas por diseño; nunca uses la clave `service_role`.
+3. En Supabase, Authentication → URL Configuration: pon la dirección de GitHub Pages como Site URL.
+
+Si `supabase/migrations/` cambia, regenera `instalar.sql` concatenando los archivos en orden.
 
 ## Panel municipal
 

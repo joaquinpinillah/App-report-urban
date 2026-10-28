@@ -23,7 +23,7 @@ export default function App() {
 
   useEffect(() => {
     // El panel usa su propio ingreso: no creamos una sesión anónima de vecino.
-    if (location.pathname.startsWith('/panel')) return setLista(true)
+    if (location.pathname.startsWith(import.meta.env.BASE_URL + 'panel')) return setLista(true)
     api.iniciarSesion().then(
       () => setLista(true),
       (e) => setFallo(e instanceof Error ? e.message : String(e)),
@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <ApiContext.Provider value={api}>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         {api.modo === 'demo' && <AvisoDemo />}
         <Rutas />
       </BrowserRouter>
