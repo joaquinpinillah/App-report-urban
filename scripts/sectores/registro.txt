@@ -1,0 +1,16 @@
+https://overpass-api.de/api/interpreter: HTTP Error 502: Bad Gateway; reintentando
+https://overpass.kumi.systems/api/interpreter: The read operation timed out; reintentando
+Cauces en el área: ['(sin nombre)', 'Estero Marga-Marga']
+/home/runner/work/App-report-urban/App-report-urban/scripts/sectores/generar.py:68: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  area_m = transform(A_METROS, area)
+/home/runner/work/App-report-urban/App-report-urban/scripts/sectores/generar.py:71: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  linea = transform(A_METROS, LineString([(p["lon"], p["lat"]) for p in via["geometry"]]))
+/home/runner/work/App-report-urban/App-report-urban/scripts/sectores/generar.py:77: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  _, sur_t, _, norte_t = transform(A_GRADOS, tramo).bounds
+Traceback (most recent call last):
+  File "/home/runner/work/App-report-urban/App-report-urban/scripts/sectores/generar.py", line 106, in <module>
+    main()
+  File "/home/runner/work/App-report-urban/App-report-urban/scripts/sectores/generar.py", line 82, in main
+    filas.append((nombre, wkt.dumps(area, rounding_precision=6), round(largo)))
+                          ^^^
+UnboundLocalError: cannot access local variable 'wkt' where it is not associated with a value
