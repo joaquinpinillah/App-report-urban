@@ -1,4 +1,4 @@
-# App Report Urban
+# VeredaViva
 
 Aplicación para que los vecinos de Viña del Mar reporten baches, veredas rotas, problemas de accesibilidad y obras inconclusas, y para que la municipalidad pueda ubicarlos, priorizarlos y darles seguimiento.
 

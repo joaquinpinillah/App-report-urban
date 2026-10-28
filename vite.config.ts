@@ -8,8 +8,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Reporta Viña',
-        short_name: 'Reporta Viña',
+        name: 'VeredaViva',
+        short_name: 'VeredaViva',
         description: 'Reporta baches, veredas rotas y obras inconclusas en Viña del Mar',
         lang: 'es-CL',
         theme_color: '#0b5394',
