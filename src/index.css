@@ -133,3 +133,33 @@ fieldset { border: none; margin: 0; padding: 0; display: flex; flex-direction: c
 legend { font-size: 14px; font-weight: 700; color: var(--gris); padding: 0 0 6px; }
 input[type='checkbox'] { width: 22px; height: 22px; accent-color: var(--azul); margin: 0; }
 textarea { font: inherit; font-size: 16px; border: 2px solid var(--borde); border-radius: 12px; padding: 10px 12px; resize: vertical; }
+
+/* Panel municipal (escritorio, se apila en pantallas angostas) */
+.panel { min-height: 100dvh; display: flex; flex-wrap: wrap; background: var(--fondo); }
+.panel nav { flex: 1 1 220px; max-width: 100%; background: var(--tinta); color: #fff; padding: 24px 16px calc(24px + var(--pie)); display: flex; flex-direction: column; gap: 6px; }
+.panel nav a { height: 44px; display: flex; align-items: center; padding: 0 12px; border-radius: 10px; color: #d8deda; text-decoration: none; }
+.panel nav a[aria-current='page'] { background: #2b3a33; color: #fff; font-weight: 700; }
+.panel nav .salir { margin-top: auto; background: none; border: none; color: #b9c2bd; font-size: 13px; text-align: left; padding: 18px 10px 0; }
+.panel main { flex: 999 1 560px; min-width: 0; padding: 28px 28px calc(28px + var(--pie)); display: flex; flex-direction: column; gap: 20px; }
+.panel h1 { font-size: 28px; }
+.panel .encabezado { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+.panel .encabezado > div:first-child { flex-grow: 1; display: flex; flex-direction: column; gap: 4px; }
+.panel .boton { min-height: 44px; font-size: 15px; border-radius: 10px; border-width: 1px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.kpi { background: #fff; border: 1px solid var(--borde); border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; }
+.kpi > span:first-child { font-size: 14px; color: var(--gris); }
+.kpi strong { font-size: 30px; }
+.filtros-panel { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; background: #fff; border: 1px solid var(--borde); border-radius: 14px; padding: 14px; }
+.filtros-panel label, .campo { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--gris); }
+.panel select, .panel input:not([type='checkbox']), .panel textarea { font: inherit; font-size: 15px; color: var(--tinta); background: #fff; border: 1px solid #c9cec6; border-radius: 10px; padding: 0 10px; height: 42px; }
+.panel textarea { height: 72px; padding: 8px 10px; }
+.caja { background: #fff; border: 1px solid var(--borde); border-radius: 14px; }
+.tabla { width: 100%; border-collapse: collapse; }
+.tabla th { font-size: 13px; font-weight: 700; color: var(--gris); text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--borde); white-space: nowrap; }
+.tabla td { font-size: 14px; padding: 10px 12px; border-bottom: 1px solid var(--fondo-2); vertical-align: middle; }
+.tabla tbody tr { cursor: pointer; }
+.tabla tbody tr:hover { background: var(--fondo); }
+.tabla tbody tr[aria-selected='true'] { background: var(--azul-suave); box-shadow: inset 4px 0 0 var(--azul); }
+.chip.p1 { background: var(--amarillo); color: var(--amarillo-texto); }
+.chip.p2 { background: #fbddc2; color: #7a3a06; }
+.chip.p3 { background: var(--peligroso); color: #fff; }

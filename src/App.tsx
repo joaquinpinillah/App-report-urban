@@ -8,6 +8,10 @@ import { AvisoPage } from './pages/AvisoPage'
 import { BarrioPage } from './pages/BarrioPage'
 import { DetallePage } from './pages/DetallePage'
 import { MapaPage } from './pages/MapaPage'
+import { PanelIndicadores } from './pages/panel/PanelIndicadores'
+import { PanelLayout } from './pages/panel/PanelLayout'
+import { PanelMapa } from './pages/panel/PanelMapa'
+import { PanelReportes } from './pages/panel/PanelReportes'
 import { PerfilPage } from './pages/PerfilPage'
 import { ReportarPage } from './pages/ReportarPage'
 
@@ -18,6 +22,8 @@ export default function App() {
   const [fallo, setFallo] = useState<string | null>(null)
 
   useEffect(() => {
+    // El panel usa su propio ingreso: no creamos una sesión anónima de vecino.
+    if (location.pathname.startsWith('/panel')) return setLista(true)
     api.iniciarSesion().then(
       () => setLista(true),
       (e) => setFallo(e instanceof Error ? e.message : String(e)),
@@ -48,6 +54,11 @@ function Rutas() {
       <Route path="/perfil" element={<PerfilPage />} />
       <Route path="/barrio" element={<BarrioPage />} />
       <Route path="/aviso/:id" element={<AvisoPage />} />
+      <Route path="/panel" element={<PanelLayout />}>
+        <Route index element={<PanelReportes />} />
+        <Route path="mapa" element={<PanelMapa />} />
+        <Route path="indicadores" element={<PanelIndicadores />} />
+      </Route>
     </Routes>
   )
 }

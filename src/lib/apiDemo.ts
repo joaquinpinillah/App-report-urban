@@ -1,4 +1,4 @@
-import type { Api, Aviso, MovimientoPuntos, ProgresoSector, ReportePublico } from './api'
+import type { Api, Aviso, CambioHistorial, MovimientoPuntos, Nota, ProgresoSector, ReportePublico } from './api'
 import { distanciaMetros } from './geo'
 import type { Categoria, Gravedad } from './tipos'
 
@@ -30,6 +30,8 @@ function ejemplo(
     programado_en: null,
     reparado_en: null,
     foto_reparacion: null,
+    sector_id: 1,
+    verificado_en: null,
     ...extra,
   }
 }
@@ -42,18 +44,29 @@ export function crearApiDemo(): Api {
       estado: 'reparado',
       gravedades_confirmadas: [3, 3, 3, 2, 3, 3, 3, 3, 3],
       creado_en: hace(15),
+      verificado_en: hace(13),
       programado_en: hace(6),
       reparado_en: hace(0),
     }),
-    ejemplo('demo-2', 'calzada', 3, -33.0262, -71.5545, 'Bache profundo en la pista derecha.', { estado: 'verificado', gravedades_confirmadas: [3, 2, 3] }),
+    ejemplo('demo-2', 'calzada', 3, -33.0262, -71.5545, 'Bache profundo en la pista derecha.', { estado: 'verificado', verificado_en: hace(1), gravedades_confirmadas: [3, 2, 3], sector_id: 2 }),
     ejemplo('demo-3', 'vereda', 2, -33.0231, -71.5502, 'Baldosas levantadas por raíces.', { gravedades_confirmadas: [2] }),
     ejemplo('demo-4', 'senaletica_alumbrado', 1, -33.0219, -71.5487, 'Luminaria apagada hace una semana.'),
     ejemplo('demo-5', 'obra_inconclusa', 2, -33.0271, -71.5509, 'Zanja tapada con tablas desde hace un mes.', {
       estado: 'programado',
+      verificado_en: hace(2),
       programado_en: hace(1),
+      sector_id: 3,
       gravedades_confirmadas: [2, 3, 2],
     }),
-    ejemplo('demo-6', 'calzada', 1, -33.0249, -71.5562, 'Tapa de alcantarilla suelta.'),
+    ejemplo('demo-6', 'calzada', 1, -33.0249, -71.5562, 'Tapa de alcantarilla suelta.', { sector_id: 4 }),
+    ejemplo('demo-7', 'vereda', 2, -33.0228, -71.5531, 'Vereda hundida frente al paradero.', {
+      estado: 'reparado',
+      creado_en: hace(40),
+      verificado_en: hace(37),
+      reparado_en: hace(30),
+      gravedades_confirmadas: [2, 2, 2],
+      sector_id: 2,
+    }),
   ]
   const puntos: MovimientoPuntos[] = [
     { motivo: 'reporte_reparado', puntos: 5, reporte_id: 'demo-1', creado_en: hace(0) },
@@ -71,6 +84,10 @@ export function crearApiDemo(): Api {
     { id: 4, nombre: 'Calle Quillota', pct_revisado: 28, pct_reparado: 10, reparados: 1, total_reportes: 7, dias_respuesta_promedio: null },
   ]
   const fotoLocal = (b: Blob) => URL.createObjectURL(b)
+  let funcionario = false
+  const notas: Record<string, Nota[]> = {}
+  const historial: Record<string, CambioHistorial[]> = {}
+  const ahora = () => new Date().toISOString()
 
   return {
     modo: 'demo',
@@ -124,5 +141,44 @@ export function crearApiDemo(): Api {
     },
     async marcarTramoSinDanos() {},
     async vincularCorreo() {},
+
+    async esFuncionario() {
+      return funcionario
+    },
+    async entrarComoFuncionario() {
+      funcionario = true
+    },
+    async salir() {
+      funcionario = false
+    },
+    async actualizarReporte(id, cambios) {
+      const r = reportes.find((x) => x.id === id)
+      if (!r) return
+      const h = (historial[id] ??= [])
+      if (cambios.estado && cambios.estado !== r.estado) {
+        h.unshift({ detalle: `Estado: ${r.estado} → ${cambios.estado}`, creado_en: ahora() })
+        if (cambios.estado === 'verificado' && !r.verificado_en) r.verificado_en = ahora()
+        if (cambios.estado === 'programado') r.programado_en = ahora()
+        if (cambios.estado === 'reparado') r.reparado_en = ahora()
+        r.estado = cambios.estado
+      }
+      if (cambios.gravedad_municipal !== undefined && cambios.gravedad_municipal !== r.gravedad_municipal) {
+        h.unshift({ detalle: `Gravedad final: ${cambios.gravedad_municipal ?? 'sin fijar'}`, creado_en: ahora() })
+        r.gravedad_municipal = cambios.gravedad_municipal
+      }
+      if (cambios.fotoReparacion) r.foto_reparacion = fotoLocal(cambios.fotoReparacion)
+    },
+    async notas(id) {
+      return notas[id] ?? []
+    },
+    async agregarNota(id, texto) {
+      ;(notas[id] ??= []).unshift({ texto, creado_en: ahora() })
+    },
+    async historial(id) {
+      return historial[id] ?? []
+    },
+    async metrosRevisados() {
+      return 18_200
+    },
   }
 }

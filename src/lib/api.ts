@@ -15,6 +15,8 @@ export interface ReportePublico {
   programado_en: string | null
   reparado_en: string | null
   foto_reparacion: string | null
+  sector_id: number | null
+  verificado_en: string | null
 }
 
 export interface NuevoReporte {
@@ -53,6 +55,22 @@ export interface ProgresoSector {
   dias_respuesta_promedio: number | null
 }
 
+export interface Nota {
+  texto: string
+  creado_en: string
+}
+
+export interface CambioHistorial {
+  detalle: string
+  creado_en: string
+}
+
+export interface CambiosReporte {
+  estado?: Estado
+  gravedad_municipal?: Gravedad | null
+  fotoReparacion?: Blob
+}
+
 // Lo que las pantallas necesitan del backend. Hay dos implementaciones:
 // Supabase (real) y demo (en memoria, para probar sin configurar nada).
 export interface Api {
@@ -72,4 +90,14 @@ export interface Api {
   marcarTramoSinDanos(puntos: [number, number][]): Promise<void>
   // Asocia un correo a la sesión anónima para no perder el progreso.
   vincularCorreo(correo: string): Promise<void>
+
+  // Panel municipal
+  esFuncionario(): Promise<boolean>
+  entrarComoFuncionario(correo: string, clave: string): Promise<void>
+  salir(): Promise<void>
+  actualizarReporte(id: string, cambios: CambiosReporte): Promise<void>
+  notas(reporteId: string): Promise<Nota[]>
+  agregarNota(reporteId: string, texto: string): Promise<void>
+  historial(reporteId: string): Promise<CambioHistorial[]>
+  metrosRevisados(): Promise<number>
 }
