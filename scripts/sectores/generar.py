@@ -79,7 +79,7 @@ def main():
                 latitudes[calle] = (min(previo[0], sur_t), max(previo[1], norte_t))
         if largo == 0:
             raise SystemExit(f"{nombre}: no hay calles de OpenStreetMap dentro del polígono")
-        filas.append((nombre, wkt.dumps(area, rounding_precision=6), round(largo)))
+        filas.append((nombre, wkt.dumps(area, rounding_precision=6, trim=True), round(largo)))
         informe += [f"## {nombre}: {round(largo)} m de calles", ""]
         informe += [
             f"- {n}: {round(m)} m (lat {latitudes[n][0]:.4f} a {latitudes[n][1]:.4f})" for n, m in nombres.most_common()
@@ -90,10 +90,10 @@ def main():
         "-- Sectores del piloto. Generado por scripts/sectores/generar.py con datos de OpenStreetMap.",
         "-- Se puede ejecutar más de una vez: actualiza los sectores que ya existen.",
     ]
-    for nombre, wkt, largo in filas:
+    for nombre, poligono, largo in filas:
         sql.append(
             "insert into sectores (nombre, area, largo_calles_m) values "
-            f"('{nombre}', st_multi(st_geomfromtext('{wkt}', 4326))::geography, {largo})\n"
+            f"('{nombre}', st_multi(st_geomfromtext('{poligono}', 4326))::geography, {largo})\n"
             "  on conflict (nombre) do update set area = excluded.area, largo_calles_m = excluded.largo_calles_m;"
         )
     sql.append("-- Asigna sector a los reportes que se hicieron antes de cargar los sectores.")
