@@ -17,6 +17,7 @@ OVERPASS = "https://overpass-api.de/api/interpreter"
 # Calles donde se camina o se circula; se dejan fuera accesos privados y senderos.
 TIPOS = "primary|secondary|tertiary|unclassified|residential|living_street|pedestrian"
 A_METROS = Transformer.from_crs(4326, 32719, always_xy=True).transform
+A_GRADOS = Transformer.from_crs(32719, 4326, always_xy=True).transform
 
 
 def calles_en(poligono):
@@ -38,18 +39,24 @@ def main():
         nombre = s["properties"]["nombre"]
         area = shape(s["geometry"])
         area_m = transform(A_METROS, area)
-        largo, nombres = 0.0, Counter()
+        largo, nombres, latitudes = 0.0, Counter(), {}
         for via in calles_en(area):
             linea = transform(A_METROS, LineString([(p["lon"], p["lat"]) for p in via["geometry"]]))
-            dentro = linea.intersection(area_m).length
-            if dentro > 0:
-                largo += dentro
-                nombres[via.get("tags", {}).get("name", "(sin nombre)")] += dentro
+            tramo = linea.intersection(area_m)
+            if tramo.length > 0:
+                calle = via.get("tags", {}).get("name", "(sin nombre)")
+                largo += tramo.length
+                nombres[calle] += tramo.length
+                _, sur_t, _, norte_t = transform(A_GRADOS, tramo).bounds
+                previo = latitudes.get(calle, (sur_t, norte_t))
+                latitudes[calle] = (min(previo[0], sur_t), max(previo[1], norte_t))
         if largo == 0:
             raise SystemExit(f"{nombre}: no hay calles de OpenStreetMap dentro del polígono")
         filas.append((nombre, area.wkt, round(largo)))
         informe += [f"## {nombre}: {round(largo)} m de calles", ""]
-        informe += [f"- {n}: {round(m)} m" for n, m in nombres.most_common()]
+        informe += [
+            f"- {n}: {round(m)} m (lat {latitudes[n][0]:.4f} a {latitudes[n][1]:.4f})" for n, m in nombres.most_common()
+        ]
         informe.append("")
 
     sql = [
