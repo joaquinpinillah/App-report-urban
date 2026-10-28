@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "nombre": "Centro" },
+      "geometry": { "type": "Polygon", "coordinates": [[
+        [-71.5600, -33.0218], [-71.5440, -33.0218], [-71.5440, -33.0280], [-71.5600, -33.0280], [-71.5600, -33.0218]
+      ]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nombre": "Población Vergara" },
+      "geometry": { "type": "Polygon", "coordinates": [[
+        [-71.5585, -33.0130], [-71.5470, -33.0130], [-71.5470, -33.0212], [-71.5585, -33.0212], [-71.5585, -33.0130]
+      ]] }
+    }
+  ]
+}
