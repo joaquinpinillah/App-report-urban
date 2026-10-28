@@ -34,7 +34,7 @@ Está en `/panel`. Para dar acceso a un funcionario:
    select id, 'Nombre Apellido' from auth.users where email = 'funcionario@munivina.cl';
    ```
 
-Para el progreso por barrio hay que cargar los sectores del piloto en la tabla `sectores`, con su polígono y el largo total de calles en metros (se puede sacar de OpenStreetMap).
+Para el progreso por barrio, pega `supabase/sectores.sql` en el editor SQL. Trae los sectores del piloto (Centro y Población Vergara, separados por el Estero Marga-Marga) con el largo de calles medido en OpenStreetMap. Para cambiar los límites, edita `scripts/sectores/sectores.geojson`: el flujo `Sectores` recalcula el SQL y deja el detalle por calle en `scripts/sectores/informe.md`.
 
 En modo demo el panel acepta cualquier correo y clave.
 
