@@ -2,120 +2,120 @@
 
 ## Centro: 20471 m de calles
 
-- 1 Norte: 2333 m
-- (sin nombre): 1627 m
-- Avenida Valparaíso: 1518 m
-- Arlegui: 1518 m
-- Viana: 1496 m
-- Álvarez: 1411 m
-- Traslaviña: 641 m
-- Marina: 560 m
-- 2 Norte: 520 m
-- Villanelo: 517 m
-- Quillota: 507 m
-- 5 Oriente: 475 m
-- Etchevers: 438 m
-- Quinta: 425 m
-- Avenida Libertad: 386 m
-- Quilpué: 329 m
-- Limache: 327 m
-- Errázuriz: 313 m
-- Ecuador: 299 m
-- Plaza José Francisco Vergara: 282 m
-- Plaza Sucre: 277 m
-- Montaña: 249 m
-- Batuco: 242 m
-- Villanelo Alto: 208 m
-- Egaña: 201 m
-- Crucero: 201 m
-- 4 Oriente: 189 m
-- Pasaje San Luis: 175 m
-- 5 1/2 Oriente: 167 m
-- Paseo Cousiño: 155 m
-- Plaza Latorre: 133 m
-- Pasaje Jofré: 124 m
-- Alcalde Prieto Nieto: 122 m
-- Central: 121 m
-- Pasaje Ruiz: 120 m
-- Pasaje Protectora: 119 m
-- 2 Oriente: 118 m
-- Paseo Valle: 116 m
-- Nueva Marina: 105 m
-- 3 1/2 Oriente: 100 m
-- Grove: 98 m
-- Puente Mercado: 97 m
-- 1 Oriente: 97 m
-- Puente Quillota: 90 m
-- Lampa: 89 m
-- Alberto Blest Gana: 85 m
-- Pasaje Eleuterio Ramirez: 75 m
-- Pasaje Quillota: 71 m
-- Mercado: 70 m
-- 1 Poniente: 56 m
-- Pasaje 2 Norte: 55 m
-- Pasaje Poblete: 55 m
-- Almirante Goñi: 52 m
-- Pasaje 1 Norte: 48 m
-- 2 1/2 Norte: 39 m
-- Etchevers Alto: 39 m
-- Las Rosas: 38 m
-- Quito: 38 m
-- 2 Poniente: 36 m
-- Avenida La Marina: 31 m
-- Pasaje Errázuriz 516: 23 m
-- 3 Poniente: 15 m
-- Puente Ecuador: 14 m
-- Pasaje Klamer: 1 m
-- 4 Poniente: 0 m
+- 1 Norte: 2333 m (lat -33.0234 a -33.0218)
+- (sin nombre): 1627 m (lat -33.0280 a -33.0218)
+- Avenida Valparaíso: 1518 m (lat -33.0262 a -33.0239)
+- Arlegui: 1518 m (lat -33.0251 a -33.0228)
+- Viana: 1496 m (lat -33.0280 a -33.0250)
+- Álvarez: 1411 m (lat -33.0280 a -33.0252)
+- Traslaviña: 641 m (lat -33.0280 a -33.0224)
+- Marina: 560 m (lat -33.0246 a -33.0238)
+- 2 Norte: 520 m (lat -33.0226 a -33.0218)
+- Villanelo: 517 m (lat -33.0266 a -33.0218)
+- Quillota: 507 m (lat -33.0264 a -33.0218)
+- 5 Oriente: 475 m (lat -33.0276 a -33.0218)
+- Etchevers: 438 m (lat -33.0269 a -33.0230)
+- Quinta: 425 m (lat -33.0272 a -33.0232)
+- Avenida Libertad: 386 m (lat -33.0235 a -33.0218)
+- Quilpué: 329 m (lat -33.0266 a -33.0241)
+- Limache: 327 m (lat -33.0271 a -33.0258)
+- Errázuriz: 313 m (lat -33.0275 a -33.0270)
+- Ecuador: 299 m (lat -33.0246 a -33.0219)
+- Plaza José Francisco Vergara: 282 m (lat -33.0251 a -33.0239)
+- Plaza Sucre: 277 m (lat -33.0264 a -33.0250)
+- Montaña: 249 m (lat -33.0278 a -33.0273)
+- Batuco: 242 m (lat -33.0267 a -33.0245)
+- Villanelo Alto: 208 m (lat -33.0280 a -33.0272)
+- Egaña: 201 m (lat -33.0280 a -33.0272)
+- Crucero: 201 m (lat -33.0261 a -33.0243)
+- 4 Oriente: 189 m (lat -33.0231 a -33.0218)
+- Pasaje San Luis: 175 m (lat -33.0252 a -33.0247)
+- 5 1/2 Oriente: 167 m (lat -33.0233 a -33.0218)
+- Paseo Cousiño: 155 m (lat -33.0260 a -33.0249)
+- Plaza Latorre: 133 m (lat -33.0241 a -33.0235)
+- Pasaje Jofré: 124 m (lat -33.0269 a -33.0258)
+- Alcalde Prieto Nieto: 122 m (lat -33.0280 a -33.0269)
+- Central: 121 m (lat -33.0256 a -33.0245)
+- Pasaje Ruiz: 120 m (lat -33.0260 a -33.0249)
+- Pasaje Protectora: 119 m (lat -33.0261 a -33.0250)
+- 2 Oriente: 118 m (lat -33.0228 a -33.0218)
+- Paseo Valle: 116 m (lat -33.0266 a -33.0255)
+- Nueva Marina: 105 m (lat -33.0227 a -33.0223)
+- 3 1/2 Oriente: 100 m (lat -33.0231 a -33.0222)
+- Grove: 98 m (lat -33.0273 a -33.0264)
+- Puente Mercado: 97 m (lat -33.0243 a -33.0234)
+- 1 Oriente: 97 m (lat -33.0227 a -33.0218)
+- Puente Quillota: 90 m (lat -33.0239 a -33.0231)
+- Lampa: 89 m (lat -33.0280 a -33.0273)
+- Alberto Blest Gana: 85 m (lat -33.0280 a -33.0273)
+- Pasaje Eleuterio Ramirez: 75 m (lat -33.0280 a -33.0274)
+- Pasaje Quillota: 71 m (lat -33.0229 a -33.0223)
+- Mercado: 70 m (lat -33.0249 a -33.0243)
+- 1 Poniente: 56 m (lat -33.0223 a -33.0218)
+- Pasaje 2 Norte: 55 m (lat -33.0224 a -33.0219)
+- Pasaje Poblete: 55 m (lat -33.0243 a -33.0238)
+- Almirante Goñi: 52 m (lat -33.0280 a -33.0278)
+- Pasaje 1 Norte: 48 m (lat -33.0232 a -33.0227)
+- 2 1/2 Norte: 39 m (lat -33.0219 a -33.0218)
+- Etchevers Alto: 39 m (lat -33.0280 a -33.0277)
+- Las Rosas: 38 m (lat -33.0280 a -33.0277)
+- Quito: 38 m (lat -33.0274 a -33.0274)
+- 2 Poniente: 36 m (lat -33.0221 a -33.0218)
+- Avenida La Marina: 31 m (lat -33.0219 a -33.0218)
+- Pasaje Errázuriz 516: 23 m (lat -33.0272 a -33.0271)
+- 3 Poniente: 15 m (lat -33.0219 a -33.0218)
+- Puente Ecuador: 14 m (lat -33.0219 a -33.0218)
+- Pasaje Klamer: 1 m (lat -33.0218 a -33.0218)
+- 4 Poniente: 0 m (lat -33.0218 a -33.0218)
 
 ## Población Vergara: 20397 m de calles
 
-- Avenida Libertad: 1847 m
-- 3 Norte: 1132 m
-- 4 Norte: 1091 m
-- 6 Norte: 1091 m
-- 5 Norte: 1060 m
-- 8 Norte: 1003 m
-- 7 Norte: 994 m
-- Avenida San Martín: 993 m
-- 1 Oriente: 967 m
-- 2 Oriente: 943 m
-- 2 Poniente: 924 m
-- 1 Poniente: 923 m
-- 3 Poniente: 923 m
-- 4 Poniente: 777 m
-- 9 Norte: 683 m
-- (sin nombre): 581 m
-- 2 Norte: 568 m
-- 5 Poniente: 530 m
-- 10 Norte: 459 m
-- 5 1/2 Poniente: 307 m
-- Avenida Perú: 280 m
-- 6 Poniente: 265 m
-- Pasaje 6 Norte: 147 m
-- Pasaje Montt: 136 m
-- Massot: 130 m
-- Pasaje Sarratea: 119 m
-- 1/2 Poniente: 118 m
-- 1/2 Oriente: 116 m
-- 4 1/2 Poniente: 115 m
-- 3 1/2 Poniente: 115 m
-- Pasaje Dolores: 111 m
-- Pasaje José Manuel Balmaceda: 107 m
-- Quillota: 102 m
-- 8 1/2 Norte: 99 m
-- Pasaje 9 1/2 Norte: 58 m
-- Borgoño: 58 m
-- Latorre: 57 m
-- 3 Norte 943: 49 m
-- Pasaje Esencia: 48 m
-- Pasaje 2 Poniente: 46 m
-- Pasaje 1 Oriente 548: 45 m
-- Pasaje 1 Oriente 560: 45 m
-- Pasaje Stohrs: 43 m
-- Pasaje Andreani: 43 m
-- Conjunto Antillanca: 39 m
-- 1 Norte: 38 m
-- Pasaje 1 1/2 Poniente: 34 m
-- Teniente Hernán Merino Correa: 31 m
-- Pasaje Neumann: 6 m
+- Avenida Libertad: 1847 m (lat -33.0212 a -33.0130)
+- 3 Norte: 1132 m (lat -33.0211 a -33.0194)
+- 4 Norte: 1091 m (lat -33.0200 a -33.0183)
+- 6 Norte: 1091 m (lat -33.0179 a -33.0162)
+- 5 Norte: 1060 m (lat -33.0190 a -33.0173)
+- 8 Norte: 1003 m (lat -33.0158 a -33.0144)
+- 7 Norte: 994 m (lat -33.0168 a -33.0153)
+- Avenida San Martín: 993 m (lat -33.0178 a -33.0130)
+- 1 Oriente: 967 m (lat -33.0212 a -33.0130)
+- 2 Oriente: 943 m (lat -33.0212 a -33.0132)
+- 2 Poniente: 924 m (lat -33.0212 a -33.0130)
+- 1 Poniente: 923 m (lat -33.0212 a -33.0130)
+- 3 Poniente: 923 m (lat -33.0212 a -33.0130)
+- 4 Poniente: 777 m (lat -33.0212 a -33.0143)
+- 9 Norte: 683 m (lat -33.0147 a -33.0133)
+- (sin nombre): 581 m (lat -33.0207 a -33.0146)
+- 2 Norte: 568 m (lat -33.0212 a -33.0204)
+- 5 Poniente: 530 m (lat -33.0212 a -33.0165)
+- 10 Norte: 459 m (lat -33.0139 a -33.0130)
+- 5 1/2 Poniente: 307 m (lat -33.0212 a -33.0185)
+- Avenida Perú: 280 m (lat -33.0162 a -33.0144)
+- 6 Poniente: 265 m (lat -33.0194 a -33.0171)
+- Pasaje 6 Norte: 147 m (lat -33.0181 a -33.0167)
+- Pasaje Montt: 136 m (lat -33.0163 a -33.0158)
+- Massot: 130 m (lat -33.0190 a -33.0185)
+- Pasaje Sarratea: 119 m (lat -33.0173 a -33.0168)
+- 1/2 Poniente: 118 m (lat -33.0142 a -33.0132)
+- 1/2 Oriente: 116 m (lat -33.0144 a -33.0134)
+- 4 1/2 Poniente: 115 m (lat -33.0176 a -33.0166)
+- 3 1/2 Poniente: 115 m (lat -33.0209 a -33.0199)
+- Pasaje Dolores: 111 m (lat -33.0140 a -33.0130)
+- Pasaje José Manuel Balmaceda: 107 m (lat -33.0172 a -33.0162)
+- Quillota: 102 m (lat -33.0212 a -33.0203)
+- 8 1/2 Norte: 99 m (lat -33.0142 a -33.0140)
+- Pasaje 9 1/2 Norte: 58 m (lat -33.0142 a -33.0141)
+- Borgoño: 58 m (lat -33.0168 a -33.0163)
+- Latorre: 57 m (lat -33.0168 a -33.0163)
+- 3 Norte 943: 49 m (lat -33.0209 a -33.0205)
+- Pasaje Esencia: 48 m (lat -33.0180 a -33.0175)
+- Pasaje 2 Poniente: 46 m (lat -33.0157 a -33.0156)
+- Pasaje 1 Oriente 548: 45 m (lat -33.0173 a -33.0172)
+- Pasaje 1 Oriente 560: 45 m (lat -33.0170 a -33.0169)
+- Pasaje Stohrs: 43 m (lat -33.0179 a -33.0179)
+- Pasaje Andreani: 43 m (lat -33.0202 a -33.0201)
+- Conjunto Antillanca: 39 m (lat -33.0160 a -33.0160)
+- 1 Norte: 38 m (lat -33.0212 a -33.0211)
+- Pasaje 1 1/2 Poniente: 34 m (lat -33.0177 a -33.0177)
+- Teniente Hernán Merino Correa: 31 m (lat -33.0173 a -33.0173)
+- Pasaje Neumann: 6 m (lat -33.0212 a -33.0212)
