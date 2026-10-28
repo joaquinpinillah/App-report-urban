@@ -3,6 +3,7 @@
 Uso: python scripts/sectores/generar.py  (requiere shapely, pyproj y acceso a Overpass)
 """
 import json
+import time
 import pathlib
 import urllib.parse
 import urllib.request
@@ -13,7 +14,8 @@ from shapely.geometry import LineString, shape
 from shapely.ops import transform
 
 RAIZ = pathlib.Path(__file__).resolve().parents[2]
-OVERPASS = "https://overpass-api.de/api/interpreter"
+# Servidores públicos de Overpass; si uno está saturado se prueba el siguiente.
+OVERPASS = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter"]
 # Calles donde se camina o se circula; se dejan fuera accesos privados y senderos.
 TIPOS = "primary|secondary|tertiary|unclassified|residential|living_street|pedestrian"
 A_METROS = Transformer.from_crs(4326, 32719, always_xy=True).transform
@@ -23,13 +25,17 @@ A_GRADOS = Transformer.from_crs(32719, 4326, always_xy=True).transform
 def calles_en(poligono):
     oeste, sur, este, norte = poligono.bounds
     consulta = f'[out:json][timeout:60];way["highway"~"^({TIPOS})$"]({sur},{oeste},{norte},{este});out geom;'
-    pedido = urllib.request.Request(
-        OVERPASS,
-        data=urllib.parse.urlencode({"data": consulta}).encode(),
-        headers={"User-Agent": "VeredaViva/0.1 (github.com/joaquinpinillah/App-report-urban)"},
-    )
-    with urllib.request.urlopen(pedido, timeout=90) as r:
-        return json.load(r)["elements"]
+    datos = urllib.parse.urlencode({"data": consulta}).encode()
+    cabeceras = {"User-Agent": "VeredaViva/0.1 (github.com/joaquinpinillah/App-report-urban)"}
+    for intento in range(6):
+        servidor = OVERPASS[intento % len(OVERPASS)]
+        try:
+            with urllib.request.urlopen(urllib.request.Request(servidor, data=datos, headers=cabeceras), timeout=90) as r:
+                return json.load(r)["elements"]
+        except OSError as e:
+            print(f"{servidor}: {e}; reintentando")
+            time.sleep(10 * (intento + 1))
+    raise SystemExit("Overpass no respondió")
 
 
 def main():
