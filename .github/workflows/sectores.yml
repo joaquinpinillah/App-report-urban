@@ -14,10 +14,20 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install shapely pyproj
-      - run: python scripts/sectores/generar.py
+      - run: python -u scripts/sectores/generar.py 2>&1 | tee scripts/sectores/registro.txt; exit ${PIPESTATUS[0]}
+        shell: bash
+      # Si falla, deja el registro en la rama para poder revisarlo sin abrir Actions.
+      - name: Guardar el registro del error
+        if: failure()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add scripts/sectores/registro.txt
+          git commit -m "Registro del cálculo de sectores (falló)" && git push
       - name: Guardar el resultado
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git rm -q --cached --ignore-unmatch scripts/sectores/registro.txt
           git add supabase/sectores.sql scripts/sectores/informe.md
           git diff --cached --quiet || { git commit -m "Recalcular sectores del piloto"; git push; }

@@ -45,7 +45,11 @@ def calles_en(poligono):
 
 def recortar(area, cauce, punto):
     """Divide el área por un cauce (p. ej. un estero) y deja el lado que contiene el punto."""
-    vias = overpass(f'["waterway"]["name"="{cauce}"]', area)
+    todas = overpass('["waterway"]', area)
+    print("Cauces en el área:", sorted({v.get("tags", {}).get("name", "(sin nombre)") for v in todas}))
+    vias = [v for v in todas if v.get("tags", {}).get("name", "").lower() == cauce.lower()]
+    if not vias:
+        raise SystemExit(f"No encontré {cauce} en OpenStreetMap")
     linea = linemerge(MultiLineString([[(p["lon"], p["lat"]) for p in v["geometry"]] for v in vias]))
     partes = list(split(area, linea).geoms)
     if len(partes) < 2:
